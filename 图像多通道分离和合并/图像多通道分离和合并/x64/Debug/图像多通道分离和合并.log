@@ -1,0 +1,7 @@
+﻿  main.cpp
+j:\qzqworkspace\programs\opencv\build\include\opencv2\core\mat.hpp(1965): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+j:\qzqworkspace\programs\opencv\build\include\opencv2\core\persistence.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+j:\qzqworkspace\programs\opencv\build\include\opencv2\core\utility.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+j:\qzqworkspace\programs\opencv\build\include\opencv2\core\utility.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  图像多通道分离和合并.vcxproj -> J:\qzqWorkspace\workspace\VS2015\imageProcess\myStudy\图像多通道分离和合并\x64\Debug\图像多通道分离和合并.exe
+  图像多通道分离和合并.vcxproj -> J:\qzqWorkspace\workspace\VS2015\imageProcess\myStudy\图像多通道分离和合并\x64\Debug\图像多通道分离和合并.pdb (Full PDB)
