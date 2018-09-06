@@ -1,0 +1,7 @@
+﻿  mainp.cpp
+j:\qzqworkspace\programs\opencv\build\include\opencv2\core\mat.hpp(1965): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+j:\qzqworkspace\programs\opencv\build\include\opencv2\core\persistence.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+j:\qzqworkspace\programs\opencv\build\include\opencv2\core\utility.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+j:\qzqworkspace\programs\opencv\build\include\opencv2\core\utility.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  线性领域滤波-方框滤波_均值滤波_高斯滤波.vcxproj -> J:\qzqWorkspace\workspace\VS2015\imageProcess\myStudy\线性领域滤波-方框滤波_均值滤波_高斯滤波\x64\Debug\线性领域滤波-方框滤波_均值滤波_高斯滤波.exe
+  线性领域滤波-方框滤波_均值滤波_高斯滤波.vcxproj -> J:\qzqWorkspace\workspace\VS2015\imageProcess\myStudy\线性领域滤波-方框滤波_均值滤波_高斯滤波\x64\Debug\线性领域滤波-方框滤波_均值滤波_高斯滤波.pdb (Full PDB)
