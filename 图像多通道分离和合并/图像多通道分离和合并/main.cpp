@@ -35,7 +35,7 @@ bool MultiChannelBlending()
 	imageBlueChannel = channels.at(0);    //vector的at方法和下标索引符号[]一样的作用，只是at更加安全，但效率低
 	                                       //注意因为这里vector中元素是Mat,所以是这里的at赋值是引用，即修改
 										//imageBlueChannel或者channels.at(0)是等价的
-
+	z
 	Mat blueROI = imageBlueChannel(Rect(20, 30, logoImage.cols, logoImage.rows));
 	addWeighted(blueROI, 1.0,logoImage, 0.5,0, blueROI);  //注意之前说的addWeighted中两张图片，不仅要长宽一样，也要通道数一样
 													//所以logoImage在度入市要是单通道图,即imread第二个参数是0

@@ -18,8 +18,8 @@ int main()
 	image = imread("lena_full.jpg");
 	
 
-	dstImage1 = image.clone();              //克隆三个原图备份
-	dstImage2 = image.clone();
+	image.copyTo(dstImage1);              //copyTo和clone都会深拷贝，会复制三个原图备份
+	dstImage2 = image.clone();			  //如果只是直接dstImage1=image，这是浅拷贝，会导致两个矩阵头指向同一个图像内存，一个改变，另一个也跟着改变
 	dstImage3 = image.clone();
 
 	namedWindow("原图窗口",1);
@@ -48,6 +48,7 @@ static void on_BoxFilter(int, void*)
 	//原图，输出图片，输出图像深度，核大小，锚点(即被平滑的那个点,(-1,-1)表示中心点)
 	boxFilter(image,dstImage1,-1,Size(kn_box+1, kn_box + 1),Point(-1,-1)); //核宽高都加一，因为TrackBar从0开始，而核宽高必须从1开始
 	imshow("方框滤波",dstImage1);
+	imshow("原图窗口", image);
 }
 
 static void on_MeanBlur(int, void*)
