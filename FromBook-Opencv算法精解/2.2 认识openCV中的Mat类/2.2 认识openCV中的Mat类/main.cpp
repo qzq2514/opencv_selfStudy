@@ -192,7 +192,7 @@ int main()
 	for (int c = 0; c < mr.cols; c++)
 	{
 		cout << mr.at<Vec3f>(0, c) << "-";  //正确访问
-		//cout << mr.at<float>(0, c) << "-";  //同样如果这样访问，则是访问值，表示访问第一行的第c个元素
+		//cout << mr.at<float>(0, c) << "-";  //同样如果这样访问，则是访问值，表示访问第一行的第c个值
 	}
 
 	cout << endl<<"=======" << endl;
