@@ -3,5 +3,4 @@ j:\qzqworkspace\programs\opencv\build\include\opencv2\core\mat.hpp(1965): warnin
 j:\qzqworkspace\programs\opencv\build\include\opencv2\core\persistence.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 j:\qzqworkspace\programs\opencv\build\include\opencv2\core\utility.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 j:\qzqworkspace\programs\opencv\build\include\opencv2\core\utility.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  2.2 认识openCV中的Mat类.vcxproj -> J:\qzqWorkspace\workspace\VS2015\imageProcess\myStudy\FromBook-Opencv算法精解\2.2 认识openCV中的Mat类\x64\Debug\2.2 认识openCV中的Mat类.exe
-  2.2 认识openCV中的Mat类.vcxproj -> J:\qzqWorkspace\workspace\VS2015\imageProcess\myStudy\FromBook-Opencv算法精解\2.2 认识openCV中的Mat类\x64\Debug\2.2 认识openCV中的Mat类.pdb (Full PDB)
+LINK : fatal error LNK1201: 
