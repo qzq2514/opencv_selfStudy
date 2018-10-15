@@ -53,6 +53,54 @@ int main()
 	Mat A4 = getRotationMatrix2D(Point2f(40, 50), 30, 0.5); //和getAffineTransform一样，同样返回2x3的CV_64F的矩阵
 	cout << A4 << endl;
 
-	system("pause");
+
+
+	//插值运算
+	//插值运算就是为了计算在仿射变化时，目标图像中无法由原图像准确仿射的元素值
+	//例如，在以原点(0,0)为中心点，放缩比例为2倍的放缩变换中有：
+	//fo(2x,2y)=fi(x,y)，所以目标图像中坐标为(3,3)的像素值按理说为原图像中坐标值为(1.5,1.5)处
+	//的值，但是下标索引没有小数啊，所以要找到合适的值去当作fi(1.5,1.5),插值运算就是找到这样合适的值
+	
+	Mat src = imread("lena_full.jpg",1);
+	imshow("原图", src);
+	
+	int w = src.cols;
+	int h = src.rows;
+	cout << w << ":" << h << endl;  //330:706
+
+	Mat AA1 = (Mat_<float>(2, 3) << 0.5, 0, 0, 0, 0.5, 0);   //仿射变换矩阵-缩小两倍
+	Mat d1;
+	//这里缩小两倍,是指图像的有效区域缩小为原来1/2，但是imshow出来的图片仍然是和原图同样大小的
+	//其余非有效区域可以通过指定为常量颜色值(BORDER_CONSTANT参数)，并通过Scalar(B,G,R)给定指定的填充色
+	warpAffine(src, d1, AA1,Size(w,h),INTER_NEAREST,BORDER_CONSTANT,Scalar(100,120,200));
+	//INTER_NEAREST:最近邻插值，即某小数坐标的元素值等于最近的整点坐标的元素值
+	cout << d1.cols << ":" << d1.rows << endl;
+	imshow("缩小两倍", d1);    //330:706
+
+	Mat AA2 = (Mat_<float>(2, 3) << 0.5, 0, w/4.0, 0, 0.5, h/4.0);   //仿射变换矩阵-缩小两倍再平移
+	Mat d2;
+	//INTER_NEAREST：双线性插值，用小数坐标点附近的四个整数坐标点的像素值进行加权求和
+	warpAffine(src, d2, AA2, Size(w, h), INTER_NEAREST, BORDER_CONSTANT, Scalar(100, 120, 200));
+	imshow("缩小两倍再平移", d2);
+
+	Mat AA3 = getRotationMatrix2D(Point2f(w / 2, h / 2), 30, 1);
+	Mat d3;
+	warpAffine(d2, d3, AA3, Size(w, h));
+	imshow("缩小两倍平移后再中心逆时针旋转30度", d3);
+	
+
+	//简化版缩放
+	Mat d4;
+	//缩放为原来的一半
+	resize(src, d4, Size(w / 2, h / 2),0,0,INTER_NEAREST);
+	//resize(src, d4, Size(), 0.5, 0.5, INTER_NEAREST);   //同样效果,Size后面的两个参数是fx,fy即宽高的缩放比例
+	imshow("简化版缩放两倍", d4);//resize得到的目标图只包括有效区域，所以也就不需要填充非有效区域
+
+
+	//简化版旋转，opencv3.x有旋转函数rotate,本版本好像是2.x就不实验了
+	
+	cout << "CV_VERSION:"<<CV_VERSION << endl;// ???明明是3.1.0啊,算了，以后就使用getRotationMatrix2D函数吧
+	waitKey(0);
+	//system("pause");
 	return 0;
 }
