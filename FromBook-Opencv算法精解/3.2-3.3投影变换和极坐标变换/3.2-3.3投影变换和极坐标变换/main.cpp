@@ -133,6 +133,7 @@ int handle2()
 }
 void handle3()
 {
+	//笛卡尔坐标变为极坐标
 	//cartToPolar函数是以原点(0,0)为中心进行极坐标变换
 	//所以这里如果以(1,1)为中心进行极坐标变换，要先将坐标转换到原点，
 	//然后调用cartToPolar进行极坐标变换，参数依次表示(笛卡尔下的横坐标集，纵坐标集，极坐标系的r,theta,是否使用角度制)
@@ -157,6 +158,75 @@ void handle4()
 	cout << y << endl;//笛卡尔坐标->极坐标:变换中心移到(0,0),进行cartToPolar
 	system("pause");  //极坐标->笛卡尔坐标:进行polarToCart,坐标从以(0,0)为中心移动到真实变换中心
 }
+
+//原图，变换中心(笛卡尔坐标系下),目标图大小，最小r，最小theta，r步长，theta步长
+Mat polar(Mat I, Point2f center, Size size, float minr=0,float mintheta=0,float thetaStep=1.0/4,float rStep=1.0)
+{
+	Mat ri = Mat::zeros(Size(1, size.height), CV_32FC1);    //存放r坐标
+
+	for (int i = 0; i < size.height; i++)
+	{
+		ri.at<float>(i, 0) = minr + i*rStep;      //计算r坐标
+	}
+	Mat r = repeat(ri, 1, size.width);     //将ri矩阵(height*1)垂直方向重复一次，水平方向重复width,
+											//构成height*width大小的矩阵(横坐标水平复制)
+	
+	Mat thetaj = Mat::zeros(Size(size.width, 1), CV_32FC1);
+	for (int j = 0; j < size.width; j++)
+	{
+		thetaj .at<float>(0,j)= mintheta + thetaStep*j;
+	}
+
+	Mat theta = repeat(thetaj,size.height, 1);    //theat充当y坐标(纵坐标垂直复制)
+
+	Mat x, y;
+	polarToCart(r, theta, x, y, true);
+
+	x += center.x;
+	y += center.y;
+
+	//dst(i,j)=src(cx+(min_r+r_step*i)*cos(min_theta+theta_stpe*j),
+	          //   cy+(min_r+r_step*i)*sin(min_theta+theta_stpe*j))
+
+	Mat dst = 125 * Mat::ones(size, CV_8UC1);
+	for (int i = 0; i < size.height; i++)
+	{
+		for (int j = 0; j < size.width; j++)
+		{
+			float xij = x.at<float>(i, j);
+			float yij = y.at<float>(i, j);
+			int nearestx = int(round(xij));
+			int nearesty = int(round(yij));
+			
+			if (nearestx >= 0 && nearestx < I.cols && nearesty >= 0 && nearesty < I.rows)
+			{
+				dst.at<uchar>(i, j) = I.at<uchar>(nearestx, nearesty);
+			}
+		}
+	}
+	return dst;
+}
+void handle5()
+{
+	Mat src = imread("circlePlate.jpg", 1);
+	if (src.empty())
+	{
+		cout << "circlePlate图片为空......" << endl;
+		return;
+	}
+
+	float thetaStep=1.0;
+	float minr = 100;
+	Size size(int(500 / thetaStep), 250);    
+	Mat dst = polar(src, Point2f(200, 250), size, minr);
+
+	//水平翻转
+	flip(dst, dst, 0);
+	imshow("原图", src);
+	imshow("极坐标变换后", dst);
+	waitKey(0);
+}
+
 int main()
 {
 	 //投影变换：给定四对CV_32F类型数据点,即4*2，得到CV_64F类型的变换矩阵(3*3)
@@ -170,7 +240,9 @@ int main()
 	//handle3();
 
 	//2.极坐标变为笛卡尔坐标
-	handle4();
+	//handle4();
 
+
+	handle5();
 	return 0;
 }
