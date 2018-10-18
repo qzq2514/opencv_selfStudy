@@ -185,8 +185,10 @@ Mat polar(Mat I, Point2f center, Size size, float minr=0,float mintheta=0,float 
 	x += center.x;
 	y += center.y;
 
-	//dst(i,j)=src(cx+(min_r+r_step*i)*cos(min_theta+theta_stpe*j),
-	          //   cy+(min_r+r_step*i)*sin(min_theta+theta_stpe*j))
+	//dst(i,j)=src(cx+(min_r+r_step*i)*cos(min_theta+theta_stpe*j), 
+	          //   cy+(min_r+r_step*i)*sin(min_theta+theta_stpe*j))  假设为dst(i,j)=src(x,y)
+	//即先将原图中距离中心点min_r+r_step*i，夹角为min_theta+theta_stpe*j的点(x,y)映射值目标图极坐标下(min_r+r_step*i,min_theta+theta_stpe*j)
+	//然后再进行放缩和平移变换将(min_r+r_step*i,min_theta+theta_stpe*j)变换到最终目标图的(i,j)位置
 
 	Mat dst = 125 * Mat::ones(size, CV_8UC1);
 	for (int i = 0; i < size.height; i++)
