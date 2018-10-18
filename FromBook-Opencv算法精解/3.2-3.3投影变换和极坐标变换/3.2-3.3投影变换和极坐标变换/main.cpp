@@ -244,7 +244,23 @@ int main()
 	//2.极坐标变为笛卡尔坐标
 	//handle4();
 
+	//图像极坐标变换的实例
+	//handle5();
 
-	handle5();
+	//除了使用handle5()函数从较低层实现图像的极坐标变换，还可以使用opencv中自带的函数
+	//但是问题是linearPolar默认是minr=0,minTheta=0,maxTheta=360,即只能进行整个圆内的极坐标变换，
+	//不能对指定的圆环进行极坐标变换
+	Mat src = imread("circlePlate.jpg", 1);
+	Mat dst;
+	linearPolar(src, dst, Point2f(200, 250), 200, CV_INTER_LINEAR);//(原图，目标图，变换中心，maxr,插值方式)
+	transpose(dst, dst);    //得到的图像,theta是垂直方向，r是水平方向，与handle5中相反，需要旋转90度
+	flip(dst, dst, 0);      //rotate不能用，可以使用转置加上镜像翻转起到旋转的效果
+	imshow("linearPolar", dst); 
+
+	//对数极坐标变换:
+	//r=M*log(sqrt((x-cx)^2+(y-cy)^2)),theta公式与原来一样
+	logPolar(src, dst, Point2f(200, 250), 100, WARP_FILL_OUTLIERS);//100即为M值，M越小，r方向上压缩越大，所以要尽量使得M值大一些，以保存更多的信息
+	imshow("logPolar", dst);      //同样得到的图像,theta是垂直方向，r是水平方向，
+	waitKey(0);
 	return 0;
 }

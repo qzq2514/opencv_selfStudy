@@ -98,8 +98,11 @@ int main()
 
 
 	//简化版旋转，opencv3.x有旋转函数rotate,本版本好像是2.x就不实验了
-	
 	cout << "CV_VERSION:"<<CV_VERSION << endl;// ???明明是3.1.0啊,算了，以后就使用getRotationMatrix2D函数吧
+	Mat dst;
+	transpose(src, dst);
+	flip(dst, dst, 0);      //rotate不能用，可以使用转置加上镜像翻转起到旋转的效果-逆时针旋转90度
+	imshow("旋转", dst);
 	waitKey(0);
 	//system("pause");
 	return 0;
