@@ -1,0 +1,2 @@
+﻿  main.cpp
+j:\qzqworkspace\workspace\vs2015\imageprocess\mystudy\frombook-opencv算法精解\5.4中值平滑\5.4中值平滑\main.cpp(12): error C3867: “cv::Mat::type”: 非标准语法；请使用 "&" 来创建指向成员的指针
