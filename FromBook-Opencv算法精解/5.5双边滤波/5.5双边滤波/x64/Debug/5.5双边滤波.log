@@ -1,0 +1,8 @@
+﻿  main.cpp
+j:\qzqworkspace\programs\opencv\build\include\opencv2\core\mat.hpp(1965): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+j:\qzqworkspace\programs\opencv\build\include\opencv2\core\persistence.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+j:\qzqworkspace\programs\opencv\build\include\opencv2\core\utility.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+j:\qzqworkspace\programs\opencv\build\include\opencv2\core\utility.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+j:\qzqworkspace\workspace\vs2015\imageprocess\mystudy\frombook-opencv算法精解\5.5双边滤波\5.5双边滤波\main.cpp(101): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+  5.5双边滤波.vcxproj -> J:\qzqWorkspace\workspace\VS2015\imageProcess\myStudy\FromBook-Opencv算法精解\5.5双边滤波\x64\Debug\5.5双边滤波.exe
+  5.5双边滤波.vcxproj -> J:\qzqWorkspace\workspace\VS2015\imageProcess\myStudy\FromBook-Opencv算法精解\5.5双边滤波\x64\Debug\5.5双边滤波.pdb (Full PDB)
