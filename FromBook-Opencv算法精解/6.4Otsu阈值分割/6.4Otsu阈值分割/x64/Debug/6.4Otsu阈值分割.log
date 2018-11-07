@@ -1,0 +1,10 @@
+﻿  main.cpp
+j:\qzqworkspace\programs\opencv\build\include\opencv2\core\mat.hpp(1965): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+j:\qzqworkspace\programs\opencv\build\include\opencv2\core\persistence.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+j:\qzqworkspace\programs\opencv\build\include\opencv2\core\utility.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+j:\qzqworkspace\programs\opencv\build\include\opencv2\core\utility.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+j:\qzqworkspace\workspace\vs2015\imageprocess\mystudy\frombook-opencv算法精解\6.4otsu阈值分割\6.4otsu阈值分割\main.cpp(68): warning C4553: “==”: 运算符不起任何作用；是否是有意使用“=”的?
+j:\qzqworkspace\workspace\vs2015\imageprocess\mystudy\frombook-opencv算法精解\6.4otsu阈值分割\6.4otsu阈值分割\main.cpp(71): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+j:\qzqworkspace\workspace\vs2015\imageprocess\mystudy\frombook-opencv算法精解\6.4otsu阈值分割\6.4otsu阈值分割\main.cpp(72): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+  6.4Otsu阈值分割.vcxproj -> J:\qzqWorkspace\workspace\VS2015\imageProcess\myStudy\FromBook-Opencv算法精解\6.4Otsu阈值分割\x64\Debug\6.4Otsu阈值分割.exe
+  6.4Otsu阈值分割.vcxproj -> J:\qzqWorkspace\workspace\VS2015\imageProcess\myStudy\FromBook-Opencv算法精解\6.4Otsu阈值分割\x64\Debug\6.4Otsu阈值分割.pdb (Full PDB)
