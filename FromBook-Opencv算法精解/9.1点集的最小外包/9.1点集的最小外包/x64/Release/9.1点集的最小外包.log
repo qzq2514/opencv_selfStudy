@@ -1,9 +1,0 @@
-﻿  main.cpp
-main.cpp(62): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
-  正在生成代码
-  14 of 153 functions ( 9.2%) were compiled, the rest were copied from previous compilation.
-    3 functions were new in current compilation
-    16 functions had inline decision re-evaluated but remain unchanged
-  已完成代码的生成
-  9.1点集的最小外包.vcxproj -> J:\qzqWorkspace\workspace\VS2015\imageProcess\myStudy\FromBook-Opencv算法精解\9.1点集的最小外包\x64\Release\9.1点集的最小外包.exe
-  9.1点集的最小外包.vcxproj -> J:\qzqWorkspace\workspace\VS2015\imageProcess\myStudy\FromBook-Opencv算法精解\9.1点集的最小外包\x64\Release\9.1点集的最小外包.pdb (Full PDB)
