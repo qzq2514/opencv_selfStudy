@@ -109,9 +109,12 @@ int main()
 	cout << "--------------" << endl;
 
 	Mat O3;
-	convertScaleAbs(I, O3, 2.5, 5);
+	I.convertTo(I, CV_32FC1, 2.0, 5);
+	convertScaleAbs(I, O3, 2.5, 5);     //convertScaleAbs产生的结果O3为CV_8UC1
 	cout << O3 << endl;
 	cout << "--------------" << endl;
+	cout << I.type() << endl;
+	cout << O3.type() << endl;
 
 	//除了对整体的输入图像进行相同参数和偏置的线性变换以外，还可以针对不同的灰度区域选择不同的参数和偏置
 	//这样可以更大程度的加大图像的对比度

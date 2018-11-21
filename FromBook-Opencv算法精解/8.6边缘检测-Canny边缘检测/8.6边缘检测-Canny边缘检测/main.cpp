@@ -261,6 +261,7 @@ int main()
 	//Canny(原图，结果图，低阈值，高阈值，Sobel核大小，是否使用平方和开方的边缘强度计算方法)
 	//最后一个参数为false则使用绝对值求和的方法计算边缘强度
 	Canny(src,cannyOpencv, 20,100,3,true);
+	cout << cannyOpencv.type() << endl;     //CV_8UC1
 	imshow("cannyOpencv", cannyOpencv);
 
 	waitKey(0);

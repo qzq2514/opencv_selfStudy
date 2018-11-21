@@ -4,7 +4,7 @@ main.cpp(111): warning C4244: “初始化”: 从“double”转换到“float�
   正在生成代码
   3 of 78 functions ( 3.8%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
+    4 functions had inline decision re-evaluated but remain unchanged
   已完成代码的生成
   8.6边缘检测-Canny边缘检测.vcxproj -> J:\qzqWorkspace\workspace\VS2015\imageProcess\myStudy\FromBook-Opencv算法精解\8.6边缘检测-Canny边缘检测\x64\Release\8.6边缘检测-Canny边缘检测.exe
   8.6边缘检测-Canny边缘检测.vcxproj -> J:\qzqWorkspace\workspace\VS2015\imageProcess\myStudy\FromBook-Opencv算法精解\8.6边缘检测-Canny边缘检测\x64\Release\8.6边缘检测-Canny边缘检测.pdb (Full PDB)

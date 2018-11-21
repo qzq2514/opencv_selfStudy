@@ -1,7 +1,3 @@
 ﻿  main.cpp
-j:\qzqworkspace\programs\opencv\build\include\opencv2\core\mat.hpp(1965): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-j:\qzqworkspace\programs\opencv\build\include\opencv2\core\persistence.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-j:\qzqworkspace\programs\opencv\build\include\opencv2\core\utility.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-j:\qzqworkspace\programs\opencv\build\include\opencv2\core\utility.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
   4.1灰度直方图和线性变换.vcxproj -> J:\qzqWorkspace\workspace\VS2015\imageProcess\myStudy\FromBook-Opencv算法精解\4.1-4.2灰度直方图和线性变换\x64\Debug\4.1灰度直方图和线性变换.exe
   4.1灰度直方图和线性变换.vcxproj -> J:\qzqWorkspace\workspace\VS2015\imageProcess\myStudy\FromBook-Opencv算法精解\4.1-4.2灰度直方图和线性变换\x64\Debug\4.1灰度直方图和线性变换.pdb (Full PDB)
