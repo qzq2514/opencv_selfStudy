@@ -23,12 +23,12 @@ void detectPlate()
 	//像车牌这种字符与背景区域颜色差异明显并且字符内颜色几乎没变化的，
 	//针对每个字符，其边缘检测的结果是有规则的(整个图片的边缘检测可能会比较混乱)
 	//这时候可以不进行二值化，直接进行边缘检测,当然，二值化后，效果肯定也更好
-	/*Mat thresh;
+	Mat thresh;
 	threshold(gBlur, thresh, 140, 255, THRESH_BINARY);
-	imshow("二值化", thresh);*/
+	imshow("二值化", thresh);
 
 	Mat canny;
-	Canny(gBlur, canny, 180, 200, 5, true);
+	Canny(thresh, canny, 180, 200, 5, true);
 	imshow("边缘检测", canny);
 
 

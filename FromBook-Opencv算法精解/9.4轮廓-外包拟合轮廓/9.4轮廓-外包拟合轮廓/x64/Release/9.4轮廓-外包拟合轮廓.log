@@ -1,7 +1,7 @@
 ﻿  main.cpp
 main.cpp(46): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
 main.cpp(47): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
-main.cpp(121): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+main.cpp(122): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
   正在生成代码
   5 of 87 functions ( 5.7%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
