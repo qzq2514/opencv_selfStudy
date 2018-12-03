@@ -137,19 +137,15 @@ int main()
 			cout << ptr[n] << endl;
 	}
 
-	cout << "========" << endl;
+	cout << "split========" << endl;
 
 	//分离通道
 	//分离图像是将被分离的图像的所有向量元素的第一个值组成第一通道，第二个值组成第二个通道
 	//分离后得到n个与原图大小相同的单通道矩阵，n等于原图像的通道数，
-	/*vector<Mat> planes_split;
-	planes_split.resize(3);*/    //release版本下可以直接split,但是debug版本下，直接split会数组越界,除非手动指定vector的长度
-	Mat planes_split[3]; //或者可以使用 Mat planes_split[3];
+	vector<Mat> planes_split;
+	//planes_split.resize(3);     //可以手动指定分离后的通道数，但是要与被分离的图像的通道数一致 
+	//Mat planes_split[3];        //也可以使用数组类型
 	split(mm, planes_split);
-
-	//所以综上:
-	//1.Release下使用vector<Mat>+resize或者 Mat planes[3]
-	//2.Debug下只能使用Mat planes[3]
 
 
 	for (int r = 0; r < planes_split[0].rows; r++)
