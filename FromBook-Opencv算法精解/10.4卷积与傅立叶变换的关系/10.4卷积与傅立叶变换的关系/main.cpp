@@ -27,7 +27,7 @@ Mat ConvFull(Mat I, Mat k)
 }
 int main()
 {
-	//先亮出公式，便于时候查询
+	//先亮出公式，便于时之后复习查询
 	//I*K   <<====>> FT_Ip.*FT_Kp  
 	Mat Img = (Mat_<double>(8, 8) << 34, 56, 1, 0, 255, 230, 45, 12,
 									0, 201, 101, 125, 52, 12, 124, 12,
@@ -74,8 +74,9 @@ int main()
 
 	Mat  IFFT2;
 	dft(ImgPadFT_mul_KetPadFT, IFFT2, DFT_REAL_OUTPUT+DFT_INVERSE+DFT_SCALE);
-	//cout << IFFT2 << endl;
-	//cout<< convFull << endl;  //从这里分别打印IFFT2和convFull可以看出两者是相等的(除去傅立叶变换后IFFT2出现精度丢失的情况)
+	cout << IFFT2 << endl;
+	cout << "-----------------------" << endl;
+	cout<< convFull << endl;  //从这里分别打印IFFT2和convFull可以看出两者是相等的(除去傅立叶变换后IFFT2出现精度丢失的情况)
 	//以上则证明原图和卷积核的全卷积等于(原图全填充的傅立叶)点乘(卷积核全填充的傅立叶)后的傅立叶逆变换(取实部)
 	//即I*K   <<====>> FT_Ip.*FT_Kp   
 	//(I,K为原图和卷积核,小p表示填充形式，FT表示傅立叶形式，*表示全卷积,.*为点乘,<<====>>表示互为傅立叶逆变换)
@@ -83,9 +84,9 @@ int main()
 
 	Mat convFullFT;
 	dft(convFull, convFullFT, DFT_COMPLEX_OUTPUT);
-	cout << convFullFT << endl;
-	cout << "----------------------" << endl;
-	cout << ImgPadFT_mul_KetPadFT << endl;//从这里也可以看出来，全卷积的傅立叶变换等于(填充原图的傅立叶)和(填充卷积核的傅立叶)的点乘
+	//cout << convFullFT << endl;
+	//cout << "----------------------" << endl;
+	//cout << ImgPadFT_mul_KetPadFT << endl;//从这里也可以看出来，全卷积的傅立叶变换等于(填充原图的傅立叶)和(填充卷积核的傅立叶)的点乘
 										  //和上面说的是一个意思
 	system("pause");
 	return 0;
