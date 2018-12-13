@@ -1,2 +1,2 @@
-opencv_traincascade.exe -data data -vec pos.vec -bg neg.txt -numPos 800 -numNeg 950 -numStages 12 -precalcValBufSize 5000 -precalcIdxBufSize 5000 -w 80 -h 20 -maxWeakCount 150 -mode ALL -minHitRate 0.99 -maxFalseAlarmRate 0.25
+opencv_traincascade.exe -data data -vec pos.vec -bg neg.txt -numPos 800 -numNeg 950 -numStages 8 -precalcValBufSize 5000 -precalcIdxBufSize 5000 -w 80 -h 20 -maxWeakCount 150 -mode ALL -minHitRate 0.99 -maxFalseAlarmRate 0.25
 ping -n -3000 127.1>nul

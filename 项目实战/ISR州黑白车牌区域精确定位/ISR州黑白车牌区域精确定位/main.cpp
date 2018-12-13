@@ -4,6 +4,7 @@
 #include<opencv2\imgproc\imgproc.hpp>
 #include <io.h>
 #include <fstream>
+#include<opencv2\objdetect\objdetect.hpp>
 
 using namespace std;
 using namespace cv;
@@ -122,10 +123,45 @@ void generateNeg()
 	}
 	cout << "neg文件数:" << id << endl;
 }
+void eval()
+{
+	CascadeClassifier classifier("plate\\data\\cascade.xml");
+	
+	
+	//string testFilePath = "plate\\eval\\";
+	string testFilePath="J:\\qzqWorkspace\\dataCenter\\psengine\\ISR - 10-17-18 to 10-22-18\\ISR - 10-17-18 to 10-22-18\\Color\\";
+	char fileSpec[255];
+	struct _finddata_t fileinfo;
+	sprintf_s(fileSpec, "%s*.*", testFilePath.c_str());
+	//sprintf_s(fileSpec, "%s*.*", testFilePath.c_str()); 
+	cout << fileSpec << endl;
+	intptr_t filehandle = _findfirst(fileSpec, &fileinfo);
+
+	if (filehandle != -1)    
+	{
+		while (_findnext(filehandle, &fileinfo) != -1)  
+		{
+			//这里读文件有可能会有其他的问题，比如上一级的表示".."也被算作目录下的内容，所以要加判断
+			string imgName = fileinfo.name;
+			string filetype = imgName.substr(imgName.rfind(".") + 1);
+			if (filetype != "jpg"  && filetype != "jpeg" && filetype != "png")
+				continue;
+			Mat img = imread(testFilePath+imgName);
+			vector<Rect> plates;
+			classifier.detectMultiScale(img, plates);
+			for (int i = 0; i < plates.size(); i++)
+			{
+				rectangle(img, plates[i], Scalar(0, 0, 255), 2);
+			}
+			imshow("plates", img);
+			waitKey(0);
+		}
+	}
+}
 int main()
 {
 	//generateNeg();
-	generatePos();
-	system("pause");
+	//generatePos();
+	eval();
 	return 0;
 }

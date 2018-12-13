@@ -1,8 +1,8 @@
 ﻿  main.cpp
   正在生成代码
-  82 of 304 functions (27.0%) were compiled, the rest were copied from previous compilation.
+  1 of 231 functions ( 0.4%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    6 functions had inline decision re-evaluated but remain unchanged
+    1 functions had inline decision re-evaluated but remain unchanged
   已完成代码的生成
   ISR州黑白车牌区域精确定位.vcxproj -> J:\qzqWorkspace\workspace\VS2015\imageProcess\myStudy\项目实战\ISR州黑白车牌区域精确定位\x64\Release\ISR州黑白车牌区域精确定位.exe
   ISR州黑白车牌区域精确定位.vcxproj -> J:\qzqWorkspace\workspace\VS2015\imageProcess\myStudy\项目实战\ISR州黑白车牌区域精确定位\x64\Release\ISR州黑白车牌区域精确定位.pdb (Full PDB)
