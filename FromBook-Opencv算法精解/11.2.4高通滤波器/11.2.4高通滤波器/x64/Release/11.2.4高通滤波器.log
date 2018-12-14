@@ -1,0 +1,12 @@
+﻿  main.cpp
+main.cpp(50): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+main.cpp(67): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+main.cpp(68): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+main.cpp(80): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+main.cpp(82): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+main.cpp(129): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+  正在生成代码
+  All 187 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+  11.2.4高通滤波器.vcxproj -> J:\qzqWorkspace\workspace\VS2015\imageProcess\myStudy\FromBook-Opencv算法精解\11.2.4高通滤波器\x64\Release\11.2.4高通滤波器.exe
+  11.2.4高通滤波器.vcxproj -> J:\qzqWorkspace\workspace\VS2015\imageProcess\myStudy\FromBook-Opencv算法精解\11.2.4高通滤波器\x64\Release\11.2.4高通滤波器.pdb (Full PDB)
