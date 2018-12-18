@@ -1,0 +1,7 @@
+﻿  main.cpp
+main.cpp(55): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+  正在生成代码
+  All 105 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+  12.色彩空间.vcxproj -> J:\qzqWorkspace\workspace\VS2015\imageProcess\myStudy\FromBook-Opencv算法精解\12.色彩空间\x64\Release\12.色彩空间.exe
+  12.色彩空间.vcxproj -> J:\qzqWorkspace\workspace\VS2015\imageProcess\myStudy\FromBook-Opencv算法精解\12.色彩空间\x64\Release\12.色彩空间.pdb (Full PDB)
